@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap');
+
+:root{
+    --color: rgb(252, 84, 84);
+    --header_articles: #333
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Listas y Enlaces */
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+/* Header de la pagina */
+.headerPrincipal{
+    padding: 12px;
+    border-top: 0.1px solid var(--color);
+    background-color: var(--color);
+    height: 90px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.headerPrincipal__menu{
+    background-image: url(/assets/icons/menu.png);
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.headerPrincipal__menu__list{
+    display: block;
+    padding: 60px 0 60px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333333e7;
+    z-index: 100;
+}
+.headerPrincipal__menu__list > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.headerPrincipal__menu__list > ul li{
+    background-color: #fff;
+    width: 50%;
+    height: 60px;
+}
+.list__navItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color);
+    font-size: 34px;
+    width: 100%;
+    height: inherit;
+}
+.list__navItem:hover{
+    transform: translate(5px, -6px);
+    transition: transform 0.2s;
+}
+
+.iconoCerrar{
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.iconoCerrar > img{
+    height: inherit;
+    width: inherit;
+}
+/* Contenido de la pagina web */
+.contenidoPrincipal{
+    width: 85vw;
+    margin: 0 auto;
+}
+.contenido__tituloAprendizajes{
+    margin: 60px 10px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid black;
+}
+.contenido, .info_contribuyentes{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            230px,
+            1fr
+        )
+    );
+    gap: 20px;
+}
+.contenido > article{
+    position: relative;
+    background-color: var(--color);
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.contenido > article:hover{
+    box-shadow: 0 0 20px 0 #000;
+    transition: box-shadow 0.3s;
+}
+.cabeza_articulos{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--header_articles);
+    height: 15%;
+    border-top: 0.1px solid var(--header_articles);
+}
+.articulos__imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 70%;
+}
+.articulos__imagen > img{
+    border-radius: 10px;
+    height: 90%;
+    width: 80%;
+}
+.pie_articulos{
+    padding: 10px;
+    background-color: var(--header_articles);
+    height: 15%;
+}
+.pie_articulos > ul{
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Contribuyentes */
+.contribuyente{
+    position: relative;
+}
+.contribuyente__header > div{
+    border-radius: 50%;
+    width: 200px;
+    overflow: hidden;
+    margin: 0px auto;
+    outline: 2px solid #000;
+}
+.contribuyente__header > h3{
+    margin: -90px 0 0 0;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--header_articles);
+    color: #fff;
+    height: 140px;
+}
+.contribuyente > p{
+    padding: 10px;
+    margin: 0;
+    background-color: var(--color);
+}
+.contribuyente > footer{
+    background-color: var(--header_articles);
+    height: 50px;
+    border-radius: 0 0 15px 15px;
+}
+.contribuyente > footer{
+    padding: 10px;
+}
+.contribuyente > footer ul{
+    align-items: center;
+    height: 100%;
+}
+.red__programador{
+    background-color: var(--color);
+    border-radius: 50%;
+}
+.red__programador, a{
+    width: 42px;
+    height: 42px;
+}
+.red__programador > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: inherit;
+}
+.red__programador > a:hover{
+    transform: translateY(-6px);
+    transition: transform 0.2s;
+}
+.red__programador > a:active{
+    transform: translateY(0px);
+    transition: transform 0.1s;
+}
+.red__programador > a img{
+    width: 34px;
+}
+
+/* Footer de toda la pagina web */
+.footerPrincipal{
+    background-color: var(--color);
+    height: 160px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
